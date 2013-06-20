@@ -1,0 +1,22 @@
+<%= link_to 'upload Photo', new_photo_path %>
+<table class='frame'>
+  <%= paginate @photos %>
+  <tr>
+    <% @photos.each do |photo| %>
+      <td >
+	<%= image_tag photo.path,
+	    :id=>photo.id, :class=>'micro', :alt => photo.name %>
+      </br>
+      <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+    <% end %>
+  </tr>
+</table>
+
+<div class='big-frame'>
+  
+</div>
+
+<div class='des'>
+  
+</div>

@@ -1,0 +1,27 @@
+// Place all the styles related to the Photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+img.micro {
+	  width: 100px;
+	  height: 80px
+}
+
+table.frame {
+	    position: relative;
+}
+
+div.big-frame {
+	    positison: relative;
+	    float: left;
+	    margin-left: 2%;
+	    margin-right: 1%;
+	    width: 70%;
+	    height:600px;
+	    border: 1px fixed
+}
+
+div.des {
+	float: left;
+	height: 600px;
+	width: 20%
+}

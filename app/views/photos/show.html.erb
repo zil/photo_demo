@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @photo.name %>
+</p>
+
+<p>
+  <%=image_tag @photo.path,:class=>'micro'%>
+</p>
+
+<p>
+  <b>Descrption:</b>
+  <%= @photo.descrption %>
+</p>
+
+<%= link_to 'Back', photos_path %>
