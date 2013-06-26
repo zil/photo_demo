@@ -8,10 +8,10 @@
 Photo.delete_all
 require 'fileutils'
 Dir.chdir("#{Rails.root}/app/assets/images")
-Dir.glob('**/*.png').each do |name|
+Dir.glob('**/*.{png,jpg}').each do |name|
   newName = name.gsub(/[^\u0000-\u007f]+/,'_')
   FileUtils.mv(name,newName) unless newName == name
-  p = Photo.new(:name => File.basename(newName,".png"))
+  p = Photo.new(:name => File.basename(newName,File.extname(newName)))
   p.path = newName
   p.save!
 end
